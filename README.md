@@ -8,7 +8,7 @@ You are free to choose your stack and technologies. At Klaus our services are bu
 
 
 ### Guidelines:
-* Scope/granularity of the test is up to you — core functionality coverage is expected.
+* Scope and granularity of the test is up to you — we are more interested in your thought process around your choices rather than broad coverage.
 * Choose the most suitable testing stack for the job.
 * Test flow should be CI ready or have an implementation plan for it.
 * Write rationale for major stack and implementation choices.
