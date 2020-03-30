@@ -91,9 +91,7 @@ export const openTooltip = () =>
 export const getTooltip = () =>
     cy.get(ratingsTooltip)
 export const closeTooltip = () =>
-    getRatingsByCategory()
-        .find(ratingsTooltipButton)
-        .trigger('mouseleave')
+   cy.get(timePeriodFilter).click()
 export const triggerExport = () =>
     cy.contains(exportButton, 'Export').click()
 
