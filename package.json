@@ -13,8 +13,9 @@
     "mochawesome-report-generator": "^4.1.0"
   },
   "scripts": {
-    "pretest": "rm -rf mochawesome-report",
-    "test:firefox": "yarn run pretest && NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser firefox",
-    "test:chrome": "yarn run pretest && NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser chrome"
+    "pretest": "rm -rf mochawesome-report/*",
+    "test:firefox": "NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser firefox",
+    "test:chrome": "NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser chrome",
+    "test": "yarn run test:chrome; yarn run test:firefox"
   }
 }
