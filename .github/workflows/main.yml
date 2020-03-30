@@ -1,14 +1,14 @@
 name: E2E on Chrome
 on: [push]
 jobs:
-  chrome:
+  firefox: 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
       - uses: cypress-io/github-action@v1
         with:
-          browser: chrome
+          browser: firefox
           headless: true
           record: true
 
@@ -19,15 +19,15 @@ jobs:
       CYPRESS_auth_url: ${{ secrets.qa_task_auth_url }}
       CYPRESS_auth_username: ${{ secrets.qa_task_auth_username }}
       CYPRESS_credential_type: ${{ secrets.qa_task_credential_type }}
-
-  firefox: 
+      
+  chrome:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
       - uses: cypress-io/github-action@v1
         with:
-          browser: firefox
+          browser: chrome
           headless: true
           record: true
 
