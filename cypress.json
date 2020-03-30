@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://app.klausapp-staging.com",
+  "integrationFolder": "cypress/e2e",
+  "chromeWebSecurity": false,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "videoCompression": false,
+  "defaultCommandTimeout": 20000,
+  "numTestsKeptInMemory": 1,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "mochawesome-report",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  },
+  "projectId": "j5peet"
+}

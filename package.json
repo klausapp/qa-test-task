@@ -1,0 +1,21 @@
+{
+  "name": "qa-test-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hellared/qa-test-task.git",
+  "author": "hella.nataly@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^4.2.0",
+    "cypress-commands": "^1.1.0",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^4.1.0"
+  },
+  "scripts": {
+    "pretest": "rm -rf mochawesome-report",
+    "test:firefox": "yarn run pretest && NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser firefox",
+    "test:chrome": "yarn run pretest && NODE_OPTIONS=--max-http-header-size=1000000 cypress run --headless --reporter mochawesome --browser chrome"
+  }
+}
