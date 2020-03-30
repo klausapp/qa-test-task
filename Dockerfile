@@ -8,4 +8,4 @@ COPY node_modules/ /e2e/node_modules
 COPY package.json /e2e
 COPY cypress.json /e2e
 COPY cypress/ /e2e/cypress
-
+RUN yarn
