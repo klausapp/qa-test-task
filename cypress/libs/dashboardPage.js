@@ -58,6 +58,9 @@ export const applyUserFilter = (value) =>
         .click()
         .contains(userList, value)
         .click();
+export const applyUserSearch = (value) =>
+    cy.get(userFilter).type(value)
+        .find(userList);
 export const getUserFilter = (name) =>
     cy.get(userFilter)
         .trigger('mouseenter')
@@ -91,5 +94,7 @@ export const closeTooltip = () =>
     getRatingsByCategory()
         .find(ratingsTooltipButton)
         .trigger('mouseleave')
+export const triggerExport = () =>
+    cy.contains(exportButton, 'Export').click()
 
 

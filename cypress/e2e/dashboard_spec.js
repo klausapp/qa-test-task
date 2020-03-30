@@ -24,7 +24,6 @@ describe('Dashboard', () => {
     getUrl().should('contain', 'direction=given');
     dashboardPage.applyStatusFilter(status.received);
     getUrl().should('not.contain', 'direction=given');
-    //TODO check request
   });
   it('User is able to filter items by time period filter', function () {
     dashboardPage.getTimePeriodFilter()
@@ -33,12 +32,15 @@ describe('Dashboard', () => {
     dashboardPage.getTimePeriodFilter()
       .should('contain', timePeriod.lastYear)
     getUrl().should('contain', 'timePeriod=year');
-    //TODO check request
   });
   it('User is able to filter items by user filter', function () {
     dashboardPage.applyUserFilter('QA Test Account');
     dashboardPage.getUserFilter('QA Test Account')
       .should('have.class', 'vs__dropdown-option--selected');
+  });
+  it('User is able to search users in user filter', function () {
+       dashboardPage.applyUserSearch('jdhsfjhbf')
+      .should('contain.text', 'No matching people.')
   });
   it('User is able to manage filters', function () {
     dashboardPage.openManageFilters();
@@ -48,8 +50,6 @@ describe('Dashboard', () => {
       .should('contain', 'Filters');
     dashboardPage.selectReview(review.only)
     getUrl().should('include', 'selfReview=only');
-    // dashboardPage.getReview()
-    // .should('have.prop', 'checked', true);
     dashboardPage.closeManageFilters();
     dashboardPage.getManageFiltersBar()
       .should('not.be.visible');
@@ -70,7 +70,5 @@ describe('Dashboard', () => {
     dashboardPage.closeTooltip()
     dashboardPage.getTooltip()
       .should('not.exist')
-  });
-  it.skip('User is able to export data', function () {
   });
 });
