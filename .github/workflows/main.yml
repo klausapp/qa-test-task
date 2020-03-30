@@ -1,4 +1,4 @@
-name: E2E on Chrome
+name: E2E
 on: [push]
 jobs:
   firefox: 
@@ -19,7 +19,7 @@ jobs:
       CYPRESS_auth_url: ${{ secrets.qa_task_auth_url }}
       CYPRESS_auth_username: ${{ secrets.qa_task_auth_username }}
       CYPRESS_credential_type: ${{ secrets.qa_task_credential_type }}
-      
+
   chrome:
     runs-on: ubuntu-latest
 

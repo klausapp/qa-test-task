@@ -1,5 +1,5 @@
 node_modules
 cypress.env.json
 cypress/videos
-cypress/screenshots
 mochawesome-report
+cypress/screenshots
