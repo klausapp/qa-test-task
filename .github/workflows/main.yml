@@ -10,3 +10,11 @@ jobs:
         with:
           browser: chrome
           headless: true
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      auth_client_id: ${{ secrets.qa_task_auth_client_id }}
+      auth_password: ${{ secrets.qa_task_auth_password }}
+      auth_url: ${{ secrets.qa_task_auth_url }}
+      auth_username: ${{ secrets.qa_task_auth_username }}
+      credential_type: ${{ secrets.qa_task_credential_type }}
+    
