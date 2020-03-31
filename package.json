@@ -6,7 +6,7 @@
   "author": "hella.nataly@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^4.2.0",
+    "cypress": "4.3.0",
     "cypress-commands": "^1.1.0",
     "mocha": "^7.1.1",
     "mochawesome": "^5.0.0",
