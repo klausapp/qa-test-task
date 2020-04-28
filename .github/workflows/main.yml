@@ -23,6 +23,9 @@ jobs:
       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
   firefox:
     runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node12.13.0-chrome80-ff74
+      options: --user 1001
     steps:
       - uses: actions/checkout@v1
       - uses: cypress-io/github-action@v1
