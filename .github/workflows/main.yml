@@ -6,12 +6,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: percy/storybook-action@v0.1.1  
       - uses: cypress-io/github-action@v1
         with:
           browser: chrome
           headless: true
           record: true
+          command-prefix: 'percy exec -- npx'
 
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -25,12 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: percy/storybook-action@v0.1.1
       - uses: cypress-io/github-action@v1
         with:
           browser: firefox
           headless: true
-          record: true  
+          record: true
+          command-prefix: 'percy exec -- npx'
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       CYPRESS_auth_client_id: ${{ secrets.qa_task_auth_client_id }}
