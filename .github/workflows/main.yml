@@ -3,6 +3,8 @@ on: [push]
 jobs:
   chrome:
     runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node12.13.0-chrome80-ff74
 
     steps:
       - uses: actions/checkout@v1
