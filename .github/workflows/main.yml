@@ -13,7 +13,7 @@ jobs:
           browser: chrome
           headless: true
           record: true
-          command-prefix: 'percy exec -- npx'
+          command-prefix: 'percy exec -t 350 -- npx'
 
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
@@ -35,7 +35,7 @@ jobs:
           browser: firefox
           headless: false
           record: true
-          command-prefix: 'percy exec -- npx'
+          command-prefix: 'percy exec -t 350 -- npx'
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       CYPRESS_auth_client_id: ${{ secrets.qa_task_auth_client_id }}
