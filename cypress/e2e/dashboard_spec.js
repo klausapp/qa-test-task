@@ -15,7 +15,7 @@ describe('Dashboard', () => {
     getUrl().should('contain', '/dashboard');
     dashboardPage.open();
   });
-  it('User is able to filter items by status filter', function () {
+  it.only('User is able to filter items by status filter', function () {
     dashboardPage.getStatusFilter(status.received)
       .should('have.prop', 'checked', true);
     dashboardPage.applyStatusFilter(status.given);

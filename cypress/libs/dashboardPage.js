@@ -41,10 +41,10 @@ export const openDashboard = () =>
         .click();
 export const getHeader = () => cy.get(header);
 export const applyStatusFilter = (status) =>
-    cy.contains(status)
+    cy.get(dashboardFilters).contains(status)
         .click();
 export const getStatusFilter = (status) =>
-    cy.contains(status).prev()
+    cy.get(dashboardFilters).contains(status).prev()
 export const applyTimePeriodFilter = (value) =>
     cy.get(timePeriodFilter)
         .click()
@@ -91,7 +91,7 @@ export const openTooltip = () =>
 export const getTooltip = () =>
     cy.get(ratingsTooltip)
 export const closeTooltip = () =>
-   cy.get(timePeriodFilter).click()
+    cy.get(timePeriodFilter).click()
 export const triggerExport = () =>
     cy.contains(exportButton, 'Export').click()
 
