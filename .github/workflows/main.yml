@@ -28,7 +28,7 @@ jobs:
       - uses: cypress-io/github-action@v1
         with:
           browser: firefox
-          headless: true
+          headless: false
           record: true
           command-prefix: 'percy exec -- npx'
     env:
