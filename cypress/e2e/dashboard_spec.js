@@ -11,6 +11,7 @@ describe('Dashboard', () => {
   });
   it('User is able to reach dashboard from navigation bar', function () {
     dashboardPage.openDashboard();
+    cy.percySnapshot("Dashboard page");
     dashboardPage.getHeader().should('contain', 'Dashboard');
     getUrl().should('contain', '/dashboard');
     dashboardPage.open();
@@ -39,7 +40,7 @@ describe('Dashboard', () => {
       .should('have.class', 'vs__dropdown-option--selected');
   });
   it('User is able to search users in user filter', function () {
-       dashboardPage.applyUserSearch('jdhsfjhbf')
+    dashboardPage.applyUserSearch('jdhsfjhbf')
       .should('contain.text', 'No matching people.')
   });
   it('User is able to manage filters', function () {

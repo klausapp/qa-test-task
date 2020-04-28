@@ -19,6 +19,7 @@ jobs:
       CYPRESS_auth_url: ${{ secrets.qa_task_auth_url }}
       CYPRESS_auth_username: ${{ secrets.qa_task_auth_username }}
       CYPRESS_credential_type: ${{ secrets.qa_task_credential_type }}
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
   firefox:
     runs-on: ubuntu-latest
     steps:
@@ -34,4 +35,5 @@ jobs:
       CYPRESS_auth_password: ${{ secrets.qa_task_auth_password }}
       CYPRESS_auth_url: ${{ secrets.qa_task_auth_url }}
       CYPRESS_auth_username: ${{ secrets.qa_task_auth_username }}
-      CYPRESS_credential_type: ${{ secrets.qa_task_credential_type }}     
+      CYPRESS_credential_type: ${{ secrets.qa_task_credential_type }}
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}     
