@@ -29,10 +29,10 @@ describe('Dashboard', () => {
   it('User is able to filter items by time period filter', function () {
     dashboardPage.getTimePeriodFilter()
       .should('contain', timePeriod.lastWeek)
-    dashboardPage.applyTimePeriodFilter(timePeriod.lastYear);
+    dashboardPage.applyTimePeriodFilter(timePeriod.last30Days);
     dashboardPage.getTimePeriodFilter()
-      .should('contain', timePeriod.lastYear)
-    getUrl().should('contain', 'timePeriod=year');
+      .should('contain', timePeriod.last30Days)
+    getUrl().should('contain', 'timePeriod=month');
   });
   it('User is able to filter items by user filter', function () {
     dashboardPage.applyUserFilter('QA Test Account');

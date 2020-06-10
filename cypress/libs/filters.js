@@ -1,10 +1,10 @@
 export const timePeriod = {
+    thisWeek: 'This week',
     lastWeek: 'Last week',
     last7days: 'Last 7 days',
+    thisMonth: 'This month',
     lastMonth: 'Last month',
     last30Days: 'Last 30 days',
-    lastQuarter: 'Last quarter',
-    lastYear: 'Last year',
     customPeriod: 'Custom period',
 };
 export const status = {
